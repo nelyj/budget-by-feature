@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require angular/angular.min.js
 //= require angular-resource/angular-resource.min.js
+//= require material
 //= require_tree .

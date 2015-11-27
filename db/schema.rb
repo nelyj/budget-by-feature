@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151127160345) do
+ActiveRecord::Schema.define(version: 20151127161044) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -64,5 +64,17 @@ ActiveRecord::Schema.define(version: 20151127160345) do
 
   add_index "milestones", ["budget_id"], name: "index_milestones_on_budget_id"
   add_index "milestones", ["feature_id"], name: "index_milestones_on_feature_id"
+
+  create_table "profiles", force: :cascade do |t|
+    t.string   "name"
+    t.string   "country"
+    t.text     "bio"
+    t.string   "photo"
+    t.integer  "account_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "profiles", ["account_id"], name: "index_profiles_on_account_id"
 
 end

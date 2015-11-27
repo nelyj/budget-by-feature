@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  percent: 1.5
+  days: 1
+  start_date: 2015-11-27 12:54:11
+  end_date: 2015-11-27 12:54:11
+  price: 1.5
+  price_type: MyString
+  note: MyText
+
+two:
+  percent: 1.5
+  days: 1
+  start_date: 2015-11-27 12:54:11
+  end_date: 2015-11-27 12:54:11
+  price: 1.5
+  price_type: MyString
+  note: MyText

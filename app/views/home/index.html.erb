@@ -1,4 +1,39 @@
-<div ng-app>
-  <input type="text" ng-model="Bla" />
-  <h1>{{Bla}}</h1>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <%= render 'layouts/public_navbar' %>
+
+  <div class="android-content mdl-layout__content">
+    <a name="top"></a>
+    <div class="android-be-together-section mdl-typography--text-center">
+      <div class="logo-font android-slogan">Te ayudamos a crear tu presupuesto</div>
+      <div class="logo-font android-sub-slogan">Somos programadores sabemos que te complica hacerlo</div>
+
+    </div>
+
+
+    <footer class="android-footer mdl-mega-footer">
+        <div class="mdl-mega-footer--top-section">
+          <div class="mdl-mega-footer--left-section">
+          </div>
+        </div>
+
+        <div class="mdl-mega-footer--middle-section">
+          <p class="mdl-typography--font-light">Hecho con <i class="material-icons">favorite</i> para programadores de programadores</p>
+        </div>
+
+        <div class="mdl-mega-footer--bottom-section">
+          <a class="android-link android-link-menu mdl-typography--font-light" id="developers-dropdown">
+            Programadores
+            <i class="material-icons">arrow_drop_up</i>
+          </a>
+          <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="developers-dropdown">
+            <li class="mdl-menu__item">Twitter Personal</li>
+            <li class="mdl-menu__item">Github Personal</li>
+            <li class="mdl-menu__item">Repositorio</li>
+          </ul>
+          <a class="android-link mdl-typography--font-light" href="https://github.com/patojimenez">Creador</a>
+        </div>
+
+      </footer>
+
+  </div>
 </div>

@@ -6,8 +6,8 @@
     <div class="android-header-spacer mdl-layout-spacer"></div>
     <div class="android-navigation-container">
       <nav class="android-navigation mdl-navigation">
-      <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Iniciar Sesion</a>
-      <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Registrar</a>
+      <%= link_to "Iniciar Session", new_account_session_path, class: "mdl-navigation__link mdl-typography--text-uppercase" %>
+      <%= link_to "Registrarse", new_account_registration_path, class: "mdl-navigation__link mdl-typography--text-uppercase" %>
       </nav>
     </div>
 

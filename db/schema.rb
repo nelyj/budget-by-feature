@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151127155411) do
+ActiveRecord::Schema.define(version: 20151127160345) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -53,5 +53,16 @@ ActiveRecord::Schema.define(version: 20151127155411) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "milestones", force: :cascade do |t|
+    t.text     "description"
+    t.integer  "budget_id"
+    t.integer  "feature_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "milestones", ["budget_id"], name: "index_milestones_on_budget_id"
+  add_index "milestones", ["feature_id"], name: "index_milestones_on_feature_id"
 
 end

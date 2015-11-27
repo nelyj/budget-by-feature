@@ -1,0 +1,7 @@
+{
+  "name": "dsl-generated dependencies",
+  "dependencies": {
+    "angularjs": "latest",
+    "angular-resource": "latest"
+  }
+}

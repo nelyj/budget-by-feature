@@ -16,6 +16,8 @@ gem 'devise'
 gem 'simple_form'
 gem 'country_select'
 gem 'bower-rails'
+gem 'material_design_lite-rails'
+gem 'material_icons'
 
 group :development, :test do
   gem 'byebug'

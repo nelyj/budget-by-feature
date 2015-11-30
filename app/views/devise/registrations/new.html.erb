@@ -1,5 +1,10 @@
-<h2>Sign up</h2>
-
+  <div class="mdl-grid">
+  <div class="mdl-layout-spacer"></div>
+  <div class="mdl-cell mdl-cell--4-col">
+    <button>Submit</button>
+  </div>
+  <div class="mdl-layout-spacer"></div>
+</div>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
@@ -13,5 +18,7 @@
     <%= f.button :submit, "Sign up" %>
   </div>
 <% end %>
+
+<button class="mdl-button">Submit</button>
 
 <%= render "devise/shared/links" %>

@@ -1,24 +1,32 @@
   <div class="mdl-grid">
   <div class="mdl-layout-spacer"></div>
   <div class="mdl-cell mdl-cell--4-col">
-    <button>Submit</button>
+    <h3>Crear una cuenta</h3> 
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
+
+
+    <div class="mdl-textfield mdl-js-textfield">
+      <label class="mdl-textfield__label" for="email">Correo Electronico</label>
+      <%= f.input :email, required: true, label: false, autofocus: true, :input_html => { :class => 'mdl-textfield__input' } %>
+    </div>
+    
+    <div class="mdl-textfield mdl-js-textfield">
+
+      <label class="mdl-textfield__label" for="password">Contraseña</label>
+      <%= f.input :password, required: true, label: false, :input_html => { :class => 'mdl-textfield__input' } %>
+    </div>
+
+
+    <div class="mdl-textfield mdl-js-textfield">
+      <label class="mdl-textfield__label" for="email_confirmation">Confirmar contrseña</label>
+      <%= f.input :password_confirmation, required: true, label: false, :input_html => { :class => 'mdl-textfield__input'} %>
+    </div>
+
+    <%= f.button :submit, "Registrarse", class: 'mdl-button mdl-button--raised mdl-button--accent' %>
+<% end %>
   </div>
   <div class="mdl-layout-spacer"></div>
 </div>
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<button class="mdl-button">Submit</button>
-
-<%= render "devise/shared/links" %>
+<br /><br /><br /><br /><br />

@@ -14,7 +14,12 @@
       <%= f.input :password, required: false, label: false, :input_html => { :class => 'mdl-textfield__input' } %>
     </div>
 
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+      <%= f.input :remember_me, label: false, :input_html => { class: 'mdl-checkbox__input' } , as: :boolean if devise_mapping.rememberable? %>
+      <span class="mdl-checkbox__label">Recordar sesion</span>
+    </label>
+    <br />
+    <br />
     <%= f.button :submit, "Iniciar sesion", class: 'mdl-button mdl-button--raised mdl-button--accent' %>
   
   <% end %>
